@@ -1,6 +1,7 @@
 # Мой первый проект
+
 ## Проект
 Этот репозиторий является каркасом для будущего веб-приложения.
+
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://LizKa2091.github.io/
-fullstack-prac1/)
+- [Публичная страница на GitHub Pages](https://LizKa2091.github.io/fullstack-prac1/)
