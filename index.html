@@ -4,163 +4,228 @@
       <meta charset="UTF-8"> 
       <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
       <title>revo</title>
+      <link rel="stylesheet" href="styles/styles.css" />
    </head>
    <body> 
-      <header> 
-         <img src="assets/img/LOGO.png" alt="revo" />
-         <nav> 
-            <button> 
-               <img src='assets/icons/shopping-cart-3.png' alt="корзина" /> 
+      <header class="header"> 
+         <nav class="header__nav"> 
+            <button class="header__cart-btn"> 
+               <img class="header__cart-icon" src='assets/icons/shopping-cart-3.png' alt="корзина" /> 
             </button> 
-            <ul> 
-               <li>Безусловно</li> 
-               <li>Кофе</li> 
-               <li>Имеет значение</li> 
-               <li>Структура</li> 
-               <li>Подарки</li> 
-               <li>Подробнее</li> 
+            <ul class="header__menu"> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#home'>Безусловно</a>
+               </li> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#about'>Кофе</a>
+               </li> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#menu'>Имеет значение</a>
+               </li> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#description'>Структура</a>
+               </li> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#combo'>Подарки</a>
+               </li> 
+               <li class="header__menu-item">
+                  <a class="header__menu-link" href='#more'>Подробнее</a>
+               </li> 
             </ul> 
          </nav>
-         <div>
-            <h1>Your personalized coffee</h1> 
-         </div>
       </header> 
-      <main> 
-         <section> 
-            <span>Your personalized coffee</span> 
-            <h2>COFFEE BUILD YOUR BASE</h2> 
-            <ul> 
-               <li> 
-                  <img src="assets/icons/ic.png" alt="Кофейня" /> 
-                  <p>Кофейня</p> 
-                  <span> Безусловно, курс на&nbsp;социально-ориентированный национальный проект предоставляет широкие </span> 
+      <main class="main"> 
+         <section class="hero" id="home"> 
+            <div class="hero__wrapper">
+               <div class="hero__logo">
+                  <img src="assets/img/LOGO.png" alt="logo" />
+               </div>
+               <h1 class="hero__title">
+                  YOUR
+                  <span class="hero__title-accent">PERSONALIZED</span>
+                  COFFEE
+               </h1>
+            </div>
+            <div class="hero__banner">
+               <img class="hero__banner-img" src="assets/img/banner.png" alt="кофейный баннер" />
+            </div>
+         </section>
+         <section class="features" id="about">
+            <p class="features__subtitle">Your Personalized Coffee</p>
+            <h2 class="features__title">COFFEE BUILD YOUR BASE</h2> 
+            <ul class="features__list"> 
+               <li class="features__item"> 
+                  <img class="features__icon" src="assets/icons/ic.png" alt="Кофейня" /> 
+                  <p class="features__item-title">Кофейня</p> 
+                  <span class="features__item-desc"> Безусловно, курс на&nbsp;социально-ориентированный национальный проект предоставляет широкие </span> 
                </li> 
-               <li> 
-                  <img src="assets/icons/ic1.png" alt="цепь" /> 
-                  <p>Цепь</p> 
-                  <span> Значимость этих проблем настолько очевидна, что сплочённость команды </span> 
+               <li class="features__item"> 
+                  <img class="features__icon" src="assets/icons/ic1.png" alt="цепь" /> 
+                  <p class="features__item-title">Цепь</p> 
+                  <span class="features__item-desc"> Значимость этих проблем настолько очевидна, что сплочённость команды </span> 
                </li> 
-               <li> 
-                  <img src="assets/icons/ic2.png" alt="стаканчики" /> 
-                  <p>Стаканчики</p> 
-                  <span> В&nbsp;целом, конечно, реализация намеченных плановых заданий способствует </span> 
+               <li class="features__item"> 
+                  <img class="features__icon" src="assets/icons/ic2.png" alt="стаканчики" /> 
+                  <p class="features__item-title">Стаканчики</p> 
+                  <span class="features__item-desc"> В&nbsp;целом, конечно, реализация намеченных плановых заданий способствует </span> 
                </li> 
-               <li> 
-                  <img src="assets/icons/ic3.png" alt="кофемашина" /> 
-                  <p>Кофемашина</p> 
-                  <span> Прежде всего, начало повседневной работы по&nbsp;формированию позиции влечёт </span> 
+               <li class="features__item"> 
+                  <img class="features__icon" src="assets/icons/ic3.png" alt="кофемашина" /> 
+                  <p class="features__item-title">Кофемашина</p> 
+                  <span class="features__item-desc"> Прежде всего, начало повседневной работы по&nbsp;формированию позиции влечёт </span> 
                </li> 
             </ul> 
          </section> 
-         <section> 
-            <span>Choose Your Favorite</span> 
-            <h2>Не&nbsp;следует, однако, забывать</h2> 
-            <ul> 
-               <li> 
-                  <p>99.000</p> 
-                  <p>REVO Morning</p> 
-                  <span>Лишь стремящиеся вытеснить</span>
-                  <div> 
-                     <button>Купить</button> 
-                     <button>Подробнее</button> 
-                  </div> 
+         <section class="products" id="menu"> 
+            <span class="products__subtitle">Choose Your Favorite</span> 
+            <h2 class="products__title">Не&nbsp;следует, однако, забывать</h2> 
+            <ul class="products__list"> 
+               <li class="product-card"> 
+                  <img class="product-card__image" src="assets/img/revo3-bg.png" style="height: 220px" alt="revo yellow" />
+                  <div class="product-card__content">
+                     <p class="product-card__price">99.000</p> 
+                     <p class="product-card__title">REVO Morning</p> 
+                     <p class="product-card__desc">Лишь стремящиеся вытеснить</p>
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
+                     </div> 
+                  </div>
                </li> 
-               <li> 
-                  <p>85.000</p> 
-                  <p>REVO Everyday</p> 
-                  <span>В&nbsp;своём стремлении повысить</span> 
-                  <div> 
-                     <button>Купить</button> 
-                     <button>Подробнее</button> 
-                  </div> 
+               <li class="product-card"> 
+                  <img class="product-card__image" src="assets/img/revo1-no-bg.png" style="height: 220px" alt="revo orange" />
+                  <div class="product-card__content">
+                     <p class="product-card__price">85.000</p> 
+                     <p class="product-card__title">REVO Everyday</p> 
+                     <p class="product-card__desc">В&nbsp;своём стремлении повысить</p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
+                     </div> 
+                  </div>
                </li> 
-               <li> 
-                  <p>139.000</p> 
-                  <p>REVO Origin</p> 
-                  <span>А&nbsp;также стремящиеся вытеснить</span> 
-                  <div> 
-                     <button>Купить</button> 
-                     <button>Подробнее</button> 
-                  </div> 
+               <li class="product-card"> 
+                  <img class="product-card__image" src="assets/img/revo1-bg.png" style="height: 220px" alt="revo blue" />
+                  <div class="product-card__content">
+                     <p class="product-card__price">139.000</p> 
+                     <p class="product-card__title">REVO Origin</p> 
+                     <p class="product-card__desc">А&nbsp;также стремящиеся вытеснить</p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
+                     </div> 
+                  </div>
                </li> 
-               <li> 
-                  <p>75.000</p> 
-                  <p>REVO Classic</p> 
-                  <span>Прежде всего, реализация намеченных</span> 
-                  <div> 
-                     <button>Купить</button> 
-                     <button>Подробнее</button> 
-                  </div> 
+               <li class="product-card"> 
+                  <img class="product-card__image" src="assets/img/revo2-bg.png" style="height: 220px" alt="revo brown" />
+                  <div class="product-card__content">
+                     <p class="product-card__price">75.000</p> 
+                     <p class="product-card__title">REVO Classic</p> 
+                     <p class="product-card__desc">Прежде всего, реализация намеченных</p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
+                     </div> 
+                  </div>
                </li>
             </ul> 
          </section> 
-         <section> 
-            <span>Best Gift For Best Friend</span> 
-            <h2>GIFTSET</h2> 
-            <div> 
-               <p>285.000</p> 
-               <p>Кофеёк расслабляющий</p> 
-               <span> А&nbsp;также активно развивающиеся страны третьего мира, вне зависимости от&nbsp;их&nbsp;уровня, должны быть превращены в&nbsp;посмешище, хотя само их&nbsp;существование приносит несомненную пользу обществу. В&nbsp;целом, конечно, консультация с&nbsp;широким активом говорит о&nbsp;возможностях дальнейших направлений развития! С&nbsp;другой стороны, сплочённость команды профессионалов обеспечивает актуальность кластеризации усилий. </span> 
-               <ul> 
-                  <li> 
-                     <img src='assets/icons/IC_coffee.png' alt="coffee" /> 
-                     <p>Зерно</p> 
-                     <p>Качественное зерно</p> 
-                  </li> 
-                  <li> 
-                     <img src='assets//icons//IC_Mountain.png' alt="mountain" /> 
-                     <p>Горы</p> 
-                     <p>700&nbsp;&mdash; 800&nbsp;м</p> 
-                  </li> 
-               </ul> 
-               <div> 
-                  <button>Купить</button> 
-                  <button>Подробнее</button> 
-               </div> 
+         <section class="giftset" id="description"> 
+            <span class="giftset__subtitle">Best Gift For Best Friend</span> 
+            <h2 class="giftset__title">GIFTSET</h2> 
+            <div class="giftset__container"> 
+               <div class="giftset__content">
+                  <div class="giftset__image-wrapper">
+                     <img class="giftset__image" src="assets/img/revo-gift.png" alt="giftset" />
+                  </div>
+                  <div class="giftset__info">
+                     <p class="giftset__price">285.000</p> 
+                     <p class="giftset__name">Кофеёк расслабляющий</p> 
+                     <span class="giftset__desc">А&nbsp;также активно развивающиеся страны третьего мира, вне зависимости от&nbsp;их&nbsp;уровня, должны быть превращены в&nbsp;посмешище, хотя само их&nbsp;существование приносит несомненную пользу обществу. В&nbsp;целом, конечно, консультация с&nbsp;широким активом говорит о&nbsp;возможностях дальнейших направлений развития! С&nbsp;другой стороны, сплочённость команды профессионалов обеспечивает актуальность кластеризации усилий. </span> 
+                     <ul class="giftset__details"> 
+                        <li class="giftset__detail"> 
+                           <img src='assets/icons/IC_coffee.png' alt="coffee" /> 
+                           <div class="giftset__detail-content">
+                              <p class="giftset__detail-title">Зерно</p> 
+                              <p class="giftset__detail-desc">Качественное зерно</p> 
+                           </div>
+                           
+                        </li> 
+                        <li class="giftset__detail"> 
+                           <img src='assets/icons/IC_Mountain.png' alt="mountain" /> 
+                           <div class="giftset__detail-content">
+                              <p class="giftset__detail-title">Горы</p> 
+                              <p class="giftset__detail-desc">700&nbsp;&mdash; 800&nbsp;м</p> 
+                           </div>
+                        </li> 
+                     </ul> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
+                     </div> 
+                  </div>
+               </div>
             </div> 
+            <div class="giftset__pagination">
+               <div class="giftset__pagination-item">1</div>
+               <div class="giftset__pagination-item">2</div>
+               <div class="giftset__pagination-item">3</div>
+            </div>
          </section> 
-         <section> 
-            <span>Your Personalized Coffee</span> 
-            <h2>Комбо кофеёк</h2> 
-            <ul> 
-               <li> 
-                  <div> 
-                     <p>147.000</p> 
-                     <p>155.000</p> 
-                     <p>Банальные, но&nbsp;неопровержимые</p> 
-                     <span> Но&nbsp;социально-экономическое развитие создаёт предпосылки для новых принципов формирования материально-технической и&nbsp;кадровой базы. </span> 
-                     <div> 
-                        <button>Купить</button> 
-                        <button>Подробнее</button> 
+         <section class="combo" id="combo"> 
+            <span class="combo__subtitle">Your Personalized Coffee</span> 
+            <h2 class="combo__title">Комбо кофеёк</h2> 
+            <ul class="combo__list"> 
+               <li class="combo-card"> 
+                  <img class="combo-card__image" src="assets/img/revo2-no-bg.png" alt="revo" />
+                  <div class="combo-card__content">
+                     <div class="combo-card__price-wrapper">
+                        <p class="combo-card__price">147.000</p> 
+                        <p class="combo-card__old-price">155.000</p> 
+                     </div>
+                     <p class="combo-card__title">Банальные, неопровергнут</p> 
+                     <p class="combo-card__desc">Но&nbsp;социально-экономическое развитие создаёт предпосылки для новых принципов формирования материально-технической и&nbsp;кадровой базы. </p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
                      </div> 
                   </div> 
                </li> 
-               <li> 
-                  <div> 
-                     <p>156.000</p> 
-                     <p>165.000</p> 
-                     <p>Противоположная точка </p> 
-                     <span> Как уже неоднократно упомянуто, явные признаки победы институционализации будут разоблачены. </span> 
-                     <div> 
-                        <button>Купить</button> 
-                        <button>Подробнее</button> 
+               <li class="combo-card"> 
+                  <img class="combo-card__image" src="assets/img/revo3-no-bg.png" alt="revo" />
+                  <div class="combo-card__content">
+                     <div class="combo-card__price-wrapper">
+                        <p class="combo-card__price">156.000</p> 
+                        <p class="combo-card__old-price">165.000</p> 
+                     </div> 
+                     <p class="combo-card__title">Противоположная точка</p> 
+                     <p class="combo-card__desc"> Как уже неоднократно упомянуто, явные признаки победы институционализации будут разоблачены. </p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
                      </div> 
                   </div> 
                </li> 
-               <li> 
-                  <div> 
-                     <p>275.000</p> 
-                     <p>260.000</p> 
-                     <span> Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции представляет собой интересный эксперимент проверки поставленных обществом задач. </span> 
-                     <div> 
-                        <button>Купить</button> 
-                        <button>Подробнее</button> 
+               <li class="combo-card"> 
+                  <img class="combo-card__image" src="assets/img/revo4-no-bg.png" alt="revo" />
+                  <div class="combo-card__content"> 
+                     <div class="combo-card__price-wrapper">
+                        <p class="combo-card__price">275.000</p> 
+                        <p class="combo-card__old-price">260.000</p> 
+                     </div>
+                     <h3 class="combo-card__title">Combo Revo Every day</h3>
+                     <p class="combo-card__desc"> Идейные соображения высшего порядка, а&nbsp;также начало повседневной работы по&nbsp;формированию позиции представляет собой интересный эксперимент проверки поставленных обществом задач. </p> 
+                     <div class="product-card__buttons"> 
+                        <button class="button--primary">Купить</button> 
+                        <button class="button--secondary">Подробнее</button> 
                      </div> 
                   </div> 
                </li> 
             </ul> 
          </section> 
       </main> 
-      <footer> &copy; Revo Coffee&nbsp;&mdash; 2025 </footer>
+      <footer class="footer"> 
+         &copy; Revo Coffee&nbsp;&mdash; 2025 
+      </footer>
    </body>
 </html>
