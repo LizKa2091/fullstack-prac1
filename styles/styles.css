@@ -24,6 +24,7 @@ body {
    color: var(--primary);
    height: 100vh;
    position: relative;
+   overflow-x: hidden;
 }
 
 a, ul, ol, li {
@@ -221,8 +222,7 @@ button {
             padding-right: 50px;
 
             .giftset__image-wrapper {
-               margin-left: -200px;
-               margin-top: -8px;
+               margin: -8px 0 0 -200px;
             }
 
             .giftset__info {
@@ -286,6 +286,7 @@ button {
       position: relative;
       padding: 100px 0;
       text-align: center;
+      z-index: 1;
 
       .combo__list {
          display: flex;
@@ -444,4 +445,536 @@ button {
    color: var(--primary);
    font-size: 18px;
    font-weight: 400;
+}
+.header__menu-toggle {
+   display: none;
+   background: none;
+   border: none;
+   color: white;
+   font-size: 24px;
+   cursor: pointer;
+}
+
+.header__logo {
+   display: none;
+}
+
+@media screen and (max-width: 1200px) {
+   .header {
+      width: 220px;
+      padding: 85px 60px 20px 40px;
+   }
+   
+   .main .hero {
+      width: calc(100% - 260px);
+   }
+   
+   .main .hero .hero__wrapper {
+      margin-left: 120px;
+      margin-right: -180px;
+   }
+   
+   .giftset .giftset__container {
+      margin-left: 80px;
+   }
+   
+   .giftset .giftset__container .giftset__content {
+      width: 70%;
+   }
+}
+
+@media screen and (max-width: 992px) {
+   .header {
+      width: 180px;
+      padding: 85px 40px 20px 30px;
+   }
+   
+   .main .hero {
+      width: calc(100% - 200px);
+   }
+   
+   .main .hero .hero__wrapper {
+      margin-left: 80px;
+      margin-right: -120px;
+   }
+   
+   .main .hero .hero__title {
+      font-size: 42px;
+      margin-top: 200px;
+   }
+   
+   .features .features__list {
+      gap: 60px;
+   }
+   
+   .features .features__list .features__item {
+      max-width: 180px;
+   }
+   
+   .giftset .giftset__container {
+      margin-left: 40px;
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   .giftset .giftset__container .giftset__content {
+      width: 90%;
+      flex-direction: column;
+      padding: 30px;
+      margin-right: 0;
+   }
+   
+   .giftset .giftset__container .giftset__content .giftset__image-wrapper {
+      margin-left: 0;
+      margin-top: 0;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+   
+   .giftset__pagination {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+   }
+   
+   .giftset__pagination .giftset__pagination-item {
+      padding: 30px 20px;
+   }
+   
+   .combo .combo__list {
+      flex-wrap: wrap;
+      gap: 40px;
+   }
+   
+   .combo .combo__list .combo-card {
+      max-width: 300px;
+   }
+   
+   .combo .combo__list .combo-card .combo-card__image {
+      width: 300px;
+   }
+}
+
+/* Планшеты (маленькие) и большие телефоны - до 768px */
+@media screen and (max-width: 768px) {
+   .header {
+      position: fixed;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+   }
+   
+   .header .header__nav {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+   }
+   
+   .header .header__menu {
+      flex-direction: row;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: none; /* Скрываем меню по умолчанию на мобильных */
+   }
+   
+   /* Добавляем кнопку гамбургер-меню */
+   .header__menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+   }
+   
+   /* Показываем меню когда оно открыто */
+   .header__menu.active {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--primary);
+      flex-direction: column;
+      padding: 20px;
+      gap: 15px;
+      z-index: 1001;
+   }
+   
+   .header .header__menu-item {
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
+   }
+   
+   .header .header__menu-item:hover {
+      font-size: 17px;
+   }
+   
+   .main .hero {
+      width: 100%;
+      margin-top: 80px;
+      flex-direction: column;
+   }
+   
+   .main .hero .hero__wrapper {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 20px;
+      text-align: center;
+   }
+   
+   .main .hero .hero__title {
+      margin-top: 50px;
+      font-size: 36px;
+   }
+   
+   .main .hero .hero__banner-img {
+      height: auto;
+      max-height: 500px;
+      width: 100%;
+      object-fit: cover;
+   }
+   
+   .features .features__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 0 20px;
+   }
+   
+   .features .features__list .features__item {
+      max-width: 100%;
+   }
+   
+   .products .products__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 0 20px;
+   }
+   
+   .product-card {
+      flex-direction: column;
+      max-width: 100%;
+   }
+   
+   .product-card .product-card__content {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-top: 20px;
+   }
+   
+   .product-card__buttons {
+      flex-direction: column;
+      gap: 15px;
+   }
+   
+   .giftset {
+      padding-top: 50px;
+      padding-bottom: 80px;
+   }
+   
+   .giftset .giftset__container {
+      margin-left: 20px;
+      margin-right: 20px;
+   }
+   
+   .giftset .giftset__container .giftset__content {
+      width: 100%;
+   }
+   
+   .giftset .giftset__info {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   
+   .giftset .giftset__details {
+      flex-direction: column;
+      gap: 30px;
+   }
+   
+   .combo {
+      padding: 60px 20px;
+   }
+   
+   .combo .combo__list {
+      flex-direction: column;
+      align-items: center;
+   }
+   
+   .combo .combo__list .combo-card {
+      max-width: 100%;
+   }
+   
+   .combo .combo__list .combo-card .combo-card__image {
+      width: 100%;
+      height: auto;
+   }
+}
+
+@media screen and (max-width: 576px) {
+   .header {
+      padding: 15px;
+   }
+   
+   .header .header__menu {
+      flex-direction: column;
+      gap: 15px;
+   }
+   
+   .header .header__menu-item {
+      font-size: 14px;
+   }
+   
+   .header .header__cart-btn {
+      order: -1;
+   }
+   
+   .main .hero .hero__title {
+      font-size: 28px;
+   }
+   
+   .main .hero .hero__title .hero__title-accent {
+      padding: 3px 10px;
+      margin-left: -8px;
+   }
+   
+   .features__subtitle, .products__subtitle, .giftset__subtitle, .combo__subtitle {
+      font-size: 15px;
+   }
+   
+   .features__title, .products__title, .giftset__title, .combo__title {
+      font-size: 22px;
+      margin-bottom: 40px;
+   }
+   
+   .features .features__list {
+      grid-template-columns: 1fr;
+      gap: 30px;
+   }
+   
+   .features .features__list .features__item .features__item-title {
+      font-size: 18px;
+      margin-top: 20px;
+   }
+   
+   .products .products__list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+   }
+   
+   .product-card__buttons {
+      flex-direction: column;
+      align-items: stretch;
+   }
+   
+   .button--primary, .button--secondary {
+      width: 100%;
+      margin-bottom: 10px;
+   }
+   
+   .giftset__name, .product-card__title, .combo-card__title {
+      font-size: 16px;
+      margin-bottom: 15px;
+   }
+   
+   .giftset__price, .product-card__price, .combo-card__price {
+      font-size: 16px;
+   }
+   
+   .product-card__desc, .giftset__desc, .combo-card__desc {
+      font-size: 13px;
+      margin-bottom: 20px;
+   }
+   
+   .combo .combo__list .combo-card .combo-card__content {
+      padding: 20px;
+   }
+   
+   .footer {
+      padding: 15px 0;
+      font-size: 14px;
+   }
+   
+   .menu::after,
+   .menu::before,
+   .description::after,
+   .combo::after,
+   .combo::before {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+   .features .features__list {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .products .products__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+   }
+}
+
+@media screen and (min-width: 769px) {
+   .features .features__list {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+   .products .products__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+   }
+}
+
+@media screen and (min-width: 993px) {
+   .products .products__list {
+      display: flex;
+      flex-wrap: wrap;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .hero__logo {
+      display: none;
+   }
+   .features, .products, .giftset, .combo {
+      margin-bottom: 80px;
+   }
+   .button--primary, .button--secondary {
+      padding: 12px 25px;
+      font-size: 16px;
+   }
+   
+   .header__menu-link {
+      padding: 5px 10px;
+      display: block;
+   }
+   body {
+      padding-top: 70px;
+   }
+   
+   .main {
+      margin-top: 0;
+   }
+}
+
+@media screen and (max-width: 1024px) {
+   .main {
+      .giftset {
+         .giftset__container {
+            margin-left: 0;
+
+            .giftset__content {
+               flex-direction: column;
+               margin-left: 0;
+               width: 80%;
+               padding: 50px;
+
+               .giftset__image-wrapper {
+                  margin: 0;
+               }
+            }
+         }
+      }
+      .combo__list {
+         flex-wrap: wrap;
+      }
+      .combo::after {
+         width: 20%;
+      }
+   }
+}
+
+@media screen and (max-width: 425px) {
+   .header {
+      padding: 15px 10px;
+      height: 60px;
+   }
+   
+   .header .header__nav {
+      flex-wrap: nowrap;
+   }
+   
+   .header__menu-toggle {
+      font-size: 20px;
+      order: 1;
+   }
+   
+   .header__cart-btn {
+      order: 2;
+      margin-left: 10px;
+   }
+   
+   .header__logo {
+      order: 3;
+      flex-grow: 1;
+      text-align: center;
+   }
+   
+   .header__logo img {
+      height: 30px;
+      width: auto;
+   }
+   
+   .header__menu.active {
+      top: 60px;
+      padding: 15px 10px;
+   }
+   
+   .header .header__menu-item {
+      font-size: 14px;
+      padding: 8px 0;
+   }
+   
+   .main .hero {
+      margin-top: 60px;
+   }
+   
+   .main .hero .hero__title {
+      font-size: 24px;
+      margin-top: 30px;
+   }
+   
+   .main .hero .hero__title .hero__title-accent {
+      padding: 2px 8px;
+      margin-left: -6px;
+      font-size: 22px;
+   }
+   
+   .features .features__list {
+      grid-template-columns: 1fr;
+      gap: 25px;
+      padding: 0 15px;
+   }
+   
+   .products .products__list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0 15px;
+   }
+   
+   .button--primary, .button--secondary {
+      padding: 10px 20px;
+      font-size: 14px;
+   }
+   .product-card__image {
+      height: auto !important;
+   }
+   .giftset__image {
+      width: 100%;
+   }
 }
